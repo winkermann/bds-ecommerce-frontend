@@ -21,8 +21,8 @@ export default function ProductDetaislCard() {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <div className="dsc-category-container">
-          <ProductCategory />
-          <ProductCategory />          
+          <ProductCategory name="Eletrônicos"/>
+          <ProductCategory name="Computador"/>          
         </div>
       </div>
     </div>
