@@ -1,12 +1,12 @@
-import './styles.css';
-import ProductCategory from '../ProductCategory';
-import { ProductDTO } from '../../models/product';
+import "./styles.css";
+import ProductCategory from "../ProductCategory";
+import { ProductDTO } from "../../models/product";
 
 type Props = {
-  product : ProductDTO;
-}
+  product: ProductDTO;
+};
 
-export default function ProductDetaislCard({ product } : Props) {
+export default function ProductDetaislCard({ product }: Props) {
   return (
     <div className="dsc-card dsc-mb20">
       <div className="dsc-product-details-top dsc-line-bottom">
@@ -15,16 +15,11 @@ export default function ProductDetaislCard({ product } : Props) {
       <div className="dsc-product-details-bottom">
         <h3>{product.price.toFixed(2)}</h3>
         <h4>{product.name}</h4>
-        <p>
-          {product.description}
-        </p>
+        <p>{product.description}</p>
         <div className="dsc-category-container">
-          {
-            product.categories.map(item => ( 
-              <ProductCategory key={item.id} name={item.name}/>
-
-            ))
-          }        
+          {product.categories.map((item) => (
+            <ProductCategory key={item.id} name={item.name} />
+          ))}
         </div>
       </div>
     </div>
